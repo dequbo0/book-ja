@@ -953,7 +953,7 @@ a new `Worker` with that `id`, and store the worker in the vector.
 
 1. `id`と`JoinHandle<()>`を保持する`Worker`構造体を定義する。
 2. `ThreadPool`を変更し、`Worker`インスタンスのベクタを保持する。
-3. `id`番号を取り、`id`と空のクロージャで大量生産されるスレッドを保持する`Worker`インスタンスを返す`Worker::new`関数を定義する。
+3. `id`番号を受け取り、`id`と空のクロージャで生成されたスレッドを保持する、`Worker`インスタンスを返す`Worker::new`関数を定義する。
 4. `ThreadPool::new`で`for`ループカウンタを使用して`id`を生成し、その`id`で新しい`Worker`を生成し、ベクタにワーカーを格納する。
 
 <!--
