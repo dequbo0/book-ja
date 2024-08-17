@@ -1,48 +1,45 @@
-# The Rust Programming Language
+# Rust プログラミング言語
 
 [![CircleCI](https://circleci.com/gh/rust-lang-ja/book-ja/tree/master-ja.svg?style=shield)](https://circleci.com/gh/rust-lang-ja/book-ja)
 
-This repository contains the source of "The Rust Programming Language" book.
+[README in English](https://github.com/dequbo0/book-ja/blob/master-ja/README-en.md)
 
-[The book is available in dead-tree form from No Starch Press][nostarch].
+このリポジトリには「Rust プログラミング言語」の書籍のソースが含まれています。
+
+[書籍は No Starch Press から紙の形式で入手可能です][nostarch]。
 
 [nostarch]: https://nostarch.com/rust
 
-You can also read the book for free online. Please see the book as shipped with
-the latest [stable], [beta], or [nightly] Rust releases. Be aware that issues
-in those versions may have been fixed in this repository already, as those
-releases are updated less frequently.
+また、オンラインで無料で読むこともできます。最新の [stable]、[beta]、または [nightly] Rust リリースに同梱されている書籍をご覧ください。これらのバージョンの問題は、更新頻度が低いため、このリポジトリですでに修正されている可能性があることにご注意ください。
 
 [stable]: https://doc.rust-lang.org/stable/book/
 [beta]: https://doc.rust-lang.org/beta/book/
 [nightly]: https://doc.rust-lang.org/nightly/book/
 
-See the [releases] to download just the code of all the code listings that appear in the book.
+書籍に掲載されているすべてのコードリストのコードのみをダウンロードするには、[releases] をご覧ください。
 
 [releases]: https://github.com/rust-lang/book/releases
 
-## Requirements
+## 要件
 
-Building the book requires [mdBook], ideally the same version that
-rust-lang/rust uses in [this file][rust-mdbook]. To get it:
+書籍のビルドには [mdBook] が必要です。理想的には、rust-lang/rust が [このファイル][rust-mdbook] で使用しているものと同じバージョンを使用してください。入手するには：
 
 [mdBook]: https://github.com/rust-lang-nursery/mdBook
 [rust-mdbook]: https://github.com/rust-lang/rust/blob/master/src/tools/rustbook/Cargo.toml
 
 ```bash
-$ cargo install mdbook --vers [version-num]
+$ cargo install mdbook --vers [バージョン番号]
 ```
 
-## Building
+## ビルド
 
-To build the book, type:
+書籍をビルドするには、次のように入力します：
 
 ```bash
 $ mdbook build
 ```
 
-The output will be in the `book` subdirectory. To check it out, open it in
-your web browser.
+出力は `book` サブディレクトリに生成されます。確認するには、ウェブブラウザで開いてください。
 
 _Firefox:_
 ```bash
@@ -60,33 +57,25 @@ $ Start-Process "chrome.exe" .\book\index.html  # Windows (PowerShell)
 $ start chrome.exe .\book\index.html            # Windows (Cmd)
 ```
 
-To run the tests:
+テストを実行するには：
 
 ```bash
 $ mdbook test
 ```
 
-## Contributing
+## 貢献
 
-We'd love your help! Please see [CONTRIBUTING.md][contrib] to learn about the
-kinds of contributions we're looking for.
+あなたの助けを歓迎します！私たちが求めている貢献の種類については、[CONTRIBUTING.md][contrib] をご覧ください。
 
 [contrib]: https://github.com/rust-lang/book/blob/main/CONTRIBUTING.md
 
-### Translations
+### 翻訳
 
-We'd love help translating the book! See the [Translations] label to join in
-efforts that are currently in progress. Open a new issue to start working on
-a new language! We're waiting on [mdbook support] for multiple languages
-before we merge any in, but feel free to start!
+書籍の翻訳にご協力いただけると嬉しいです！現在進行中の取り組みに参加するには、[Translations] ラベルをご覧ください。新しい言語の作業を開始するには、新しい issue を開いてください！複数言語対応の [mdbook サポート] を待っている状態ですが、開始は自由です！
 
 [Translations]: https://github.com/rust-lang/book/issues?q=is%3Aopen+is%3Aissue+label%3ATranslations
-[mdbook support]: https://github.com/rust-lang-nursery/mdBook/issues/5
+[mdbook サポート]: https://github.com/rust-lang-nursery/mdBook/issues/5
 
-## Spellchecking
+## スペルチェック
 
-To scan source files for spelling errors, you can use the `spellcheck.sh`
-script. It needs a dictionary of valid words, which is provided in
-`dictionary.txt`. If the script produces a false positive (say, you used word
-`BTreeMap` which the script considers invalid), you need to add this word to
-`dictionary.txt` (keep the sorted order for consistency).
+ソースファイルのスペルエラーをスキャンするには、`spellcheck.sh` スクリプトを使用できます。有効な単語の辞書が必要で、これは `dictionary.txt` で提供されています。スクリプトが誤検出を生成した場合（例えば、スクリプトが無効と見なす `BTreeMap` という単語を使用した場合）、この単語を `dictionary.txt` に追加する必要があります（一貫性のためにソートされた順序を保持してください）。
